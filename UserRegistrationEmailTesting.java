@@ -10,46 +10,42 @@ import java.util.Collection;
 import org.junit.Before;
 
 @RunWith(Parameterized.class)
-public class UserRegistrationTesting  
+public class UserRegistrationEmailTesting  
 {
 	boolean expectedResult;
-	String firstNames,email;
-	UserRegistration obj,obj1;
+	String email;
+	UserRegistration obj;
 	@Before 
 	public void initialize()
 	{
 		obj=new UserRegistration();
-		obj1=new UserRegistration();
 	}
 	
-	public UserRegistrationTesting(String firstNames,boolean expectedResult) 
+	public UserRegistrationEmailTesting(String email,boolean expectedResult) 
 	{
-		this.firstNames=firstNames;
+		this.email=email;
 		this.expectedResult=expectedResult;
 	}
+	
 	
 	@Parameterized.Parameters
 	public static Collection<Object[]> input()
 	{
 		return Arrays.asList(
 				new Object[][] {
-						{"Dhruv",true},//here passing some test cases for first names and expected results
-						{"Aakriti",true},
+						{"dhruv0103@gmail.com",true},//here passing some test cases for first names and expected results
+						{"abc.xyz@bl.co.in",true},
 						{"A",false},
 						{"As",false},
-						{"Sad",true},
-						{"Vishwesh",true}
+						{"Sad",false},
+						{"abc@bl.co",true}
 						
 				});
 	}
 	
 	@Test
-	public void addTest1() {
-		assertEquals(expectedResult, obj.validateFirstName(firstNames));
-	}
-	@Test
-	public void addTest() {
-		assertEquals(expectedResult, obj.validateLastName(firstNames));
+	public void addTest2() {
+		assertEquals(expectedResult, obj.validateEmail(email));
 	}
 }
 
