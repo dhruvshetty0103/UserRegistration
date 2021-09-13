@@ -21,4 +21,13 @@ public class UserRegistration
 			String pattern = "^[A-Z][a-zA-Z]{2,}";
 		    return Pattern.matches(pattern, lastName);
 		}
+		
+	/*method to validate the Email
+	 * entered by the user
+	 */
+	    public boolean validateEmail(String email)
+	    {
+	        String pattern = "[a-z0-9_+-]*[.a-z0-9_+-]*?@[a-z0-9]*.[a-z]*[.a-z]*?$";
+	        return Pattern.matches(pattern, email);
+	    }
 }
