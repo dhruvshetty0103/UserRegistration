@@ -12,4 +12,13 @@ public class UserRegistration
 			String pattern = "^[A-Z][a-zA-Z]{2,}";
 	        return Pattern.matches(pattern, firstName);
 		}
+		
+	/* The below validateLastName function will check for whether it satisfy
+	 * pattern if yes then it returns boolean value true for it else false
+	 */
+		public boolean validateLastName(String lastName) 
+		{
+			String pattern = "^[A-Z][a-zA-Z]{2,}";
+		    return Pattern.matches(pattern, lastName);
+		}
 }
