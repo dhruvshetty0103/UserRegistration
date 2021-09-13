@@ -33,13 +33,13 @@ public class UserRegistrationPasswordTesting
 	{
 		return Arrays.asList(
 				new Object[][] {
-						{"917A574068586",true},//here passing some test cases for first names and expected results
+						{"917A@74068586",true},//here passing some test cases for first names and expected results
 						{"91D",false},
-						{"d1sAdfjdgfdh",true},
+						{"d1sAdfjdgfdh",false},
 						{"75740",false},
 						{"aaAdsadas",false},
 						{"abcb#Alsasc0o",true},
-						{"ABCDEFG9",true}						
+						{"$ABCDEFG9",true}						
 
 				});
 	}
