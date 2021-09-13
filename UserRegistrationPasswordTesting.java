@@ -33,11 +33,11 @@ public class UserRegistrationPasswordTesting
 				new Object[][] {
 						{"917A574068586",true},//here passing some test cases for first names and expected results
 						{"91D",false},
-						{"dfsAdfjdgfdh",true},
+						{"d1sAdfjdgfdh",true},
 						{"75740",false},
-						{"aaAdsadas",true},
-						{"abcb#Alsasco",true},
-						{"ABCDEFG",false}
+						{"aaAdsadas",false},
+						{"abcb#Alsasc0o",true},
+						{"ABCDEFG9",true}
 				});
 	}
 
