@@ -10,24 +10,24 @@ import java.util.Collection;
 import org.junit.Before;
 
 @RunWith(Parameterized.class)
-public class UserRegistrationEmailTesting
+public class UserRegistrationEmailTesting  
 {
 	boolean expectedResult;
 	String email;
 	UserRegistration obj;
-	@Before
+	@Before 
 	public void initialize()
 	{
 		obj=new UserRegistration();
 	}
-
-	public UserRegistrationEmailTesting(String email,boolean expectedResult)
+	
+	public UserRegistrationEmailTesting(String email,boolean expectedResult) 
 	{
 		this.email=email;
 		this.expectedResult=expectedResult;
 	}
-
-
+	
+	
 	@Parameterized.Parameters
 	public static Collection<Object[]> input()
 	{
@@ -39,10 +39,10 @@ public class UserRegistrationEmailTesting
 						{"As",false},
 						{"Sad",false},
 						{"abc@bl.co",true}
-
+						
 				});
 	}
-
+	
 	@Test
 	public void addTest2() {
 		assertEquals(expectedResult, obj.validateEmail(email));
