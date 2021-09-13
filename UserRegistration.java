@@ -40,4 +40,12 @@ public class UserRegistration
 	        return Pattern.matches(pattern, phoneNumber);
 	    }
 	    
+	/*method to validate the Email
+	 * entered by the user
+	 */
+	    public boolean validatePasswordMinLength(String password)
+	    {
+	    	String pattern = "^.{8,}";
+		    return Pattern.matches(pattern, password);
+		}
 }
