@@ -30,4 +30,14 @@ public class UserRegistration
 	        String pattern = "[a-z0-9_+-]*[.a-z0-9_+-]*?@[a-z0-9]*.[a-z]*[.a-z]*?$";
 	        return Pattern.matches(pattern, email);
 	    }
+	
+	/*method to validate the Email
+	 * entered by the user
+	 */
+	    public boolean validatePhoneNumber(String phoneNumber)
+	    {
+	    	String pattern = "^[0-9]{2}\\s?[0-9]{10}$";
+	        return Pattern.matches(pattern, phoneNumber);
+	    }
+	    
 }
