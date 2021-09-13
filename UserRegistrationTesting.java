@@ -42,8 +42,12 @@ public class UserRegistrationTesting
 				});
 	}
 	@Test
-	public void addTest() {
+	public void addTest1() {
 		assertEquals(expectedResult, obj.validateFirstName(firstNames));
+	}
+	@Test
+	public void addTest() {
+		assertEquals(expectedResult, obj.validateLastName(firstNames));
 	}
 }
 
