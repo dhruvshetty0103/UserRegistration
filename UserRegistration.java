@@ -45,7 +45,7 @@ public class UserRegistration
 	 */
 	    public boolean validatePasswordMinLength(String password)
 	    {
-	    	String pattern = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+	    	String pattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
 		    return Pattern.matches(pattern, password);
 		}
 }
