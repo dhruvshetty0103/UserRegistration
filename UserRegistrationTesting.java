@@ -2,8 +2,6 @@ package com.regex.userregistration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -30,15 +28,16 @@ public class UserRegistrationTesting
 	}
 	
 	@Parameterized.Parameters
-	public static Collection input()
+	public static Collection<Object[]> input()
 	{
 		return Arrays.asList(
 				new Object[][] {
-						{"Dhruv",true},
-						{"Raj",true},
+						{"Dhruv",true},//here passing some test cases for first names and expected results
+						{"Aakriti",true},
 						{"A",false},
 						{"As",false},
 						{"Sad",true},
+						{"Vishwesh",true}
 						
 				});
 	}
