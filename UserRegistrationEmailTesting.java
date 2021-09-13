@@ -33,12 +33,15 @@ public class UserRegistrationEmailTesting
 	{
 		return Arrays.asList(
 				new Object[][] {
-						{"dhruv0103@gmail.com",true},//here passing some test cases for first names and expected results
-						{"abc.xyz@bl.co.in",true},
-						{"A",false},
-						{"As",false},
-						{"Sad",false},
-						{"abc@bl.co",true}
+						{"abc@yahoo.com",true},//here passing some test cases for first names and expected results
+						{"abc-100@yahoo.com",true},
+						{"abc.100@yahoo.com",true},
+						{"abc111@abc.com",true},
+						{"abc-100@abc.net",true},
+						{"abc.100@abc.com.au",true},
+						{"abc@1.com",true},
+						{"abc@gmail.com.com",true},
+						{"abc+100@gmail.com",true},
 						
 				});
 	}
