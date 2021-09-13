@@ -37,15 +37,10 @@ public class UserRegistrationPasswordTesting
 						{"91D",false},
 						{"d1sAdfjdgfdh",true},
 						{"75740",false},
-<<<<<<< HEAD
 						{"aaAdsadas",false},
 						{"abcb#Alsasc0o",true},
-						{"ABCDEFG9",true}
-=======
-						{"aaAdsadas",true},
-						{"abcb#Alsasco",true},
-						{"ABCDEFG",false}						
->>>>>>> c1f8793c7a2c3faba622a4baad6ab5633b27ff85
+						{"ABCDEFG9",true}						
+
 				});
 	}
 	
