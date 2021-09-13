@@ -10,22 +10,24 @@ import java.util.Collection;
 import org.junit.Before;
 
 @RunWith(Parameterized.class)
-public class UserRegistrationPasswordTesting
+public class UserRegistrationPasswordTesting 
 {
 	boolean expectedResult;
 	String password;
 	UserRegistration obj;
-	@Before
+	@Before 
 	public void initialize()
 	{
 		obj=new UserRegistration();
 	}
-
-	public UserRegistrationPasswordTesting(String password,boolean expectedResult)
+	
+	public UserRegistrationPasswordTesting(String password,boolean expectedResult) 
 	{
 		this.password=password;
 		this.expectedResult=expectedResult;
 	}
+	
+	
 	@Parameterized.Parameters
 	public static Collection<Object[]> input()
 	{
@@ -35,12 +37,18 @@ public class UserRegistrationPasswordTesting
 						{"91D",false},
 						{"d1sAdfjdgfdh",true},
 						{"75740",false},
+<<<<<<< HEAD
 						{"aaAdsadas",false},
 						{"abcb#Alsasc0o",true},
 						{"ABCDEFG9",true}
+=======
+						{"aaAdsadas",true},
+						{"abcb#Alsasco",true},
+						{"ABCDEFG",false}						
+>>>>>>> c1f8793c7a2c3faba622a4baad6ab5633b27ff85
 				});
 	}
-
+	
 	@Test
 	public void addTest() {
 		assertEquals(expectedResult, obj.validatePasswordMinLength(password));

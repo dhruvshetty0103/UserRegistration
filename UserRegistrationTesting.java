@@ -22,7 +22,7 @@ public class UserRegistrationTesting
 		obj1=new UserRegistration();
 	}
 
-	public UserRegistrationTesting(String firstNames,boolean expectedResult)
+	public UserRegistrationTesting(String firstNames,boolean expectedResult) 
 	{
 		this.firstNames=firstNames;
 		this.expectedResult=expectedResult;
